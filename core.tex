@@ -1,0 +1,117 @@
+\documentclass[11pt, letterpaper]{article}
+\title{Building the foundations of a game engine}
+\author{Zachary Boehm}
+\date{October 2024}
+
+% Set teh font
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Placeholder text
+\usepackage{blindtext}
+
+% Change the margins and geometry of the document
+\usepackage{geometry}
+
+% Remove the numbers from sections only in the document
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\Large\bfseries}{}{0pt}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{}{0pt}{}
+\titleformat{\subsubsection}{\normalfont\small\bfseries}{}{0pt}{}
+
+% Color and link toc
+\usepackage{color}   %May be necessary if you want to color links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktocpage=true, %set to all if you want both sections and subsections linked
+    %linktoc=all, % Use this for poth title and page number
+    linkcolor=blue,  %choose some color if you want links to stand out
+}
+
+% Allows manipulating the line spacing
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{wrapfig} % Wrap figures/images
+
+% Import graphics
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+\begin{document}
+
+\maketitle
+
+\break
+
+\tableofcontents
+
+\break
+
+\newgeometry{bottom=1.5cm, right=2cm, left=2cm, top=1.5cm}
+
+\section{Prelude}
+
+The following sections will reference a ``library''. This library is some low level core/system library that handles cross-platform interactions with the operating system. Each section will describe a part of the functionality that this library can take on as a cross-platform operating system API layer.
+
+\section{Windowing}
+
+Creating and managing windows in most operating systems are very similar; the program asks the OS for resource to create a window, then the program polls for events and dispatches or translate the events sent by the OS to the window.
+
+Once the program has a window it is responsible for handling events sent from the operating system for the window. These events can include and are not limited to: input, resizing, minimizing, maximizing, focus, and much more.
+
+\subsection{Menu, Caption, Title}
+\blindtext
+\subsubsection{Title/Caption}
+\blindtext
+\subsubsection{Custom Title/Caption}
+\blindtext
+\subsubsection{Menu}
+\blindtext
+\subsubsection{Macos Menu}
+\blindtext
+\subsubsection{Linux Menu}
+\blindtext
+
+\subsection{SysTray}
+\blindtext
+\subsubsection{What is it}
+\blindtext
+\subsubsection{Icon}
+\blindtext
+\subsubsection{Context Menu}
+\blindtext
+
+\subsection{Event Loop}
+\blindtext
+\subsubsection{Concept}
+\blindtext
+\subsubsection{Types of events}
+\blindtext
+\subsubsection{Handling Events}
+\blindtext
+\subsubsection{Updating the Affected Window}
+\blindtext
+
+\subsection{Input}
+\blindtext
+\subsubsection{Keyboard}
+\blindtext
+\subsubsection{Keyboard translation challenges}
+\blindtext
+\subsubsection{Mouse}
+\blindtext
+\subsubsection{Controller}
+\blindtext
+
+\section{Audio}
+\subsection{System level interactions}
+\subsection{Audio file types}
+\subsection{Affects}
+
+\section{Why Not Included Graphics?}
+\subsection{Using existing technology and libraries}
+\subsection{Library Bindings}
+
+\end{document}
